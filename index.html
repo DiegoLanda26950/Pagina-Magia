@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,85 +14,73 @@
 <body>
 
     <!-- CABECERA -->
-
     <header>
-        <h1>✨ Festival de Magia ✨</h1>
-
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#artistas">Artistas</a>
-            <a href="#programa">Programa</a>
-            <a href="#entradas">Entradas</a>
+            <h1>✨ Festival de Magia</h1>
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#programa">Programa</a></li>
+                <li><a href="#entradas">Entradas</a></li>
+            </ul>
         </nav>
     </header>
 
 
     <!-- INICIO -->
-
     <section id="inicio" class="hero">
 
-        <div>
-            <p class="fecha">15 - 17 AGOSTO 2026</p>
+        <div class="hero-content">
 
-            <h2>
-                La magia cobra vida
-            </h2>
+            <h2>La magia cobra vida</h2>
 
             <p>
-                Tres días llenos de ilusión, misterio y
-                espectáculos para toda la familia.
+                Disfruta de un fin de semana lleno de magia,
+                ilusión y grandes espectáculos.
+            </p>
+
+            <p class="fecha">
+                📅 15 - 17 de agosto de 2026
             </p>
 
             <button id="infoButton">
                 Descubre el festival
             </button>
+
         </div>
 
     </section>
 
 
     <!-- ARTISTAS -->
-
     <section id="artistas">
 
-        <h2>🪄 Nuestros magos</h2>
+        <h2>Artistas invitados</h2>
 
-        <div class="cards">
+        <div class="artistas-container">
 
-            <article>
-                <div class="icon">🎩</div>
-
+            <div class="artista">
                 <h3>David Black</h3>
-
                 <p>
-                    Especialista en grandes ilusiones
-                    y trucos sorprendentes.
+                    Especialista en grandes ilusiones y espectáculos
+                    sorprendentes.
                 </p>
-            </article>
+            </div>
 
-
-            <article>
-                <div class="icon">🔮</div>
-
+            <div class="artista">
                 <h3>Laura Moon</h3>
-
                 <p>
-                    Una de las mejores magas de
-                    mentalismo e ilusionismo.
+                    Una de las mejores magas de cerca y mentalismo.
                 </p>
-            </article>
+            </div>
 
-
-            <article>
-                <div class="icon">🃏</div>
-
+            <div class="artista">
                 <h3>Max Cardini</h3>
-
                 <p>
-                    Experto en magia con cartas
-                    y espectáculos de cerca.
+                    Maestro de la magia clásica y los trucos imposibles.
                 </p>
-            </article>
+            </div>
 
         </div>
 
@@ -100,31 +88,34 @@
 
 
     <!-- PROGRAMA -->
+    <section id="programa">
 
-    <section id="programa" class="programa">
+        <h2>Programa</h2>
 
-        <h2>📅 Programa</h2>
+        <div class="programa-container">
 
-        <div class="schedule">
+            <div class="dia">
+                <h3>Viernes</h3>
 
-            <div>
-                <strong>Viernes - 18:00</strong>
-                <span>Gran espectáculo de apertura</span>
+                <p>18:00 - Apertura del festival</p>
+                <p>20:00 - Espectáculo de David Black</p>
+                <p>22:00 - Gran espectáculo de magia</p>
             </div>
 
-            <div>
-                <strong>Sábado - 17:00</strong>
-                <span>Magia para toda la familia</span>
+            <div class="dia">
+                <h3>Sábado</h3>
+
+                <p>11:00 - Taller de magia</p>
+                <p>18:00 - Espectáculo de Laura Moon</p>
+                <p>21:00 - Noche de grandes ilusiones</p>
             </div>
 
-            <div>
-                <strong>Sábado - 21:30</strong>
-                <span>Gran noche de ilusionismo</span>
-            </div>
+            <div class="dia">
+                <h3>Domingo</h3>
 
-            <div>
-                <strong>Domingo - 19:00</strong>
-                <span>Espectáculo final</span>
+                <p>12:00 - Magia para toda la familia</p>
+                <p>18:00 - Espectáculo de Max Cardini</p>
+                <p>20:00 - Gran cierre del festival</p>
             </div>
 
         </div>
@@ -133,44 +124,89 @@
 
 
     <!-- ENTRADAS -->
+    <section id="entradas">
 
-    <section id="entradas" class="tickets">
+        <h2>Compra tus entradas</h2>
 
-        <h2>🎟️ Entradas</h2>
-
-        <p>
-            No te pierdas el festival de magia del año.
+        <p class="precio">
+            Entrada: <strong>15 €</strong>
         </p>
 
-        <div class="price">
-            15€
+        <div class="formulario-compra">
+
+            <form id="ticketForm">
+
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu@email.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo">
+                    <label for="entradas">Número de entradas</label>
+
+                    <input
+                        type="number"
+                        id="entradas"
+                        name="entradas"
+                        min="1"
+                        value="1"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit" id="ticketButton">
+                    Comprar entrada
+                </button>
+
+            </form>
+
+            <p id="mensajeCompra"></p>
+
         </div>
-
-        <button id="ticketButton">
-            Comprar entrada
-        </button>
-
-        <p id="message"></p>
 
     </section>
 
 
-    <!-- FOOTER -->
-
+    <!-- PIE DE PÁGINA -->
     <footer>
 
-        <p>✨ Festival de Magia 2026 ✨</p>
+        <p>
+            © 2026 Festival de Magia
+        </p>
 
         <p>
-            Donde lo imposible se hace realidad.
+            ✨ La magia está a punto de comenzar ✨
         </p>
 
     </footer>
 
 
+    <!-- JAVASCRIPT -->
+    <script src="js/api.js"></script>
     <script src="js/script.js"></script>
 
 </body>
 
 </html>
-```
