@@ -1,4 +1,8 @@
 
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,246 +15,404 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #120b20;
+    background: #120b1f;
     color: white;
+    line-height: 1.6;
 }
 
 
-/* HEADER */
+/* =========================
+   CABECERA
+========================= */
 
 header {
-    background: #1b1030;
-    padding: 20px 8%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    background: #0b0712;
+    padding: 20px 50px;
     position: sticky;
     top: 0;
-
-    z-index: 10;
-}
-
-header h1 {
-    font-size: 24px;
-    color: #f5c542;
+    z-index: 1000;
+    border-bottom: 1px solid #3d2855;
 }
 
 nav {
+    max-width: 1200px;
+    margin: auto;
+
     display: flex;
-    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: #f4c542;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #f5c542;
+    color: #f4c542;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 500px;
+    min-height: 80vh;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    padding: 60px 10%;
+    text-align: center;
+
+    padding: 80px 20px;
 
     background:
-        linear-gradient(
-            rgba(18, 11, 32, 0.65),
-            rgba(18, 11, 32, 0.9)
-        ),
-        linear-gradient(135deg, #54218a, #15102c);
+        radial-gradient(
+            circle at center,
+            #43245f 0%,
+            #21102f 45%,
+            #120b1f 100%
+        );
 }
 
-.hero div {
-    max-width: 600px;
-}
-
-.fecha {
-    color: #f5c542;
-    font-weight: bold;
-    letter-spacing: 2px;
+.hero-content {
+    max-width: 800px;
 }
 
 .hero h2 {
     font-size: 60px;
-    margin: 15px 0;
+    color: #f4c542;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-button {
-    background: #f5c542;
-    color: #17101f;
-
-    border: none;
-    border-radius: 6px;
-
-    padding: 13px 22px;
-
-    margin-top: 25px;
-
+.hero .fecha {
+    color: #d8b7e8;
     font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px 25px;
+
+    background: #f4c542;
+    color: #170d22;
+
+    font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
 }
 
 button:hover {
     background: #ffd966;
+    transform: translateY(-2px);
 }
 
 
-/* SECCIONES */
+/* =========================
+   SECCIONES
+========================= */
 
-section:not(.hero) {
-    padding: 70px 10%;
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 40px;
+
+    font-size: 38px;
+
+    color: #f4c542;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   ARTISTAS
+========================= */
+
+.artistas-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.artista {
+    background: #21132f;
+
+    border: 1px solid #49315c;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
+}
+
+.artista:hover {
+    transform: translateY(-5px);
+    border-color: #f4c542;
+}
+
+.artista h3 {
+    color: #f4c542;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.artista p {
+    color: #ddd;
+}
+
+
+/* =========================
+   PROGRAMA
+========================= */
+
+.programa-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.dia {
+    background: #21132f;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    border: 1px solid #49315c;
+}
+
+.dia h3 {
+    color: #f4c542;
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.dia p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #3d2850;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   ENTRADAS
+========================= */
+
+#entradas {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.precio {
+    font-size: 24px;
+
+    margin-bottom: 30px;
+
+    color: #ddd;
+}
+
+.precio strong {
+    color: #f4c542;
+
     font-size: 32px;
 }
 
 
-/* ARTISTAS */
+/* =========================
+   FORMULARIO
+========================= */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+.formulario-compra {
+    background: #21132f;
 
-.cards article {
-    background: #211332;
+    border: 1px solid #49315c;
 
-    padding: 30px;
-
-    border-radius: 10px;
-
-    text-align: center;
-}
-
-.cards article:hover {
-    transform: translateY(-5px);
-}
-
-.icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.cards h3 {
-    color: #f5c542;
-    margin-bottom: 10px;
-}
-
-.cards p {
-    color: #c8c0d2;
-    line-height: 1.5;
-}
-
-
-/* PROGRAMA */
-
-.programa {
-    background: #1b1030;
-}
-
-.schedule {
-    max-width: 700px;
-    margin: auto;
-}
-
-.schedule div {
-    background: #28163b;
-
-    padding: 20px;
-
-    margin-bottom: 12px;
-
-    border-left: 4px solid #f5c542;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.schedule strong {
-    color: #f5c542;
-}
-
-.schedule span {
-    color: #ddd5e5;
-}
-
-
-/* ENTRADAS */
-
-.tickets {
-    text-align: center;
-}
-
-.tickets p {
-    color: #c8c0d2;
-}
-
-.price {
-    font-size: 50px;
-
-    color: #f5c542;
-
-    font-weight: bold;
-
-    margin: 20px;
-}
-
-#message {
-    margin-top: 20px;
-    color: #f5c542;
-}
-
-
-/* FOOTER */
-
-footer {
-    text-align: center;
+    border-radius: 12px;
 
     padding: 35px;
 
+    max-width: 500px;
+
+    margin: auto;
+
+    text-align: left;
+}
+
+#ticketForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo label {
+    color: #f4c542;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #5c4070;
+
+    border-radius: 7px;
+
+    background: #130c1c;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #f4c542;
+}
+
+.campo input::placeholder {
+    color: #9d91a6;
+}
+
+#ticketButton {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+#mensajeCompra {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #f4c542;
+
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
     background: #0b0712;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 40px;
+
+    border-top: 1px solid #3d2855;
 
     color: #aaa;
 }
 
 footer p:first-child {
-    color: #f5c542;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+footer p:last-child {
+    color: #f4c542;
 }
 
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     header {
-        flex-direction: column;
-        gap: 15px;
+        padding: 20px;
     }
 
     nav {
-        gap: 12px;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -258,11 +420,45 @@ footer p:first-child {
         font-size: 42px;
     }
 
-    .cards {
+    .artistas-container,
+    .programa-container {
         grid-template-columns: 1fr;
     }
 
-    .schedule div {
-        flex-direction: column;
+    section {
+        padding: 60px 20px;
     }
 }
+
+
+@media (max-width: 500px) {
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .formulario-compra {
+        padding: 25px 20px;
+    }
+}
+
