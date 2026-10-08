@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #120b20;
+    color: white;
+}
+
+
+/* HEADER */
+
+header {
+    background: #1b1030;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #f5c542;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f5c542;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            rgba(18, 11, 32, 0.65),
+            rgba(18, 11, 32, 0.9)
+        ),
+        linear-gradient(135deg, #54218a, #15102c);
+}
+
+.hero div {
+    max-width: 600px;
+}
+
+.fecha {
+    color: #f5c542;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    background: #f5c542;
+    color: #17101f;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 13px 22px;
+
+    margin-top: 25px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffd966;
+}
+
+
+/* SECCIONES */
+
+section:not(.hero) {
+    padding: 70px 10%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+
+/* ARTISTAS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cards article {
+    background: #211332;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.cards article:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.cards h3 {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+.cards p {
+    color: #c8c0d2;
+    line-height: 1.5;
+}
+
+
+/* PROGRAMA */
+
+.programa {
+    background: #1b1030;
+}
+
+.schedule {
+    max-width: 700px;
+    margin: auto;
+}
+
+.schedule div {
+    background: #28163b;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    border-left: 4px solid #f5c542;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.schedule strong {
+    color: #f5c542;
+}
+
+.schedule span {
+    color: #ddd5e5;
+}
+
+
+/* ENTRADAS */
+
+.tickets {
+    text-align: center;
+}
+
+.tickets p {
+    color: #c8c0d2;
+}
+
+.price {
+    font-size: 50px;
+
+    color: #f5c542;
+
+    font-weight: bold;
+
+    margin: 20px;
+}
+
+#message {
+    margin-top: 20px;
+    color: #f5c542;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 35px;
+
+    background: #0b0712;
+
+    color: #aaa;
+}
+
+footer p:first-child {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule div {
+        flex-direction: column;
+    }
+}
